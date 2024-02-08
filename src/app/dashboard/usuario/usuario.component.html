@@ -1,0 +1,30 @@
+<app-spinner *ngIf="loading"></app-spinner>
+<div class="container" *ngIf="!loading">
+    <div class="row mt-5 justify-content-center">
+        <div class="col-6">
+            <div class="card">
+                <img class="card-img-top" [src]="image" alt="Title" width="400"  />
+                <div class="card-body">
+                    <h4 class="card-title">{{name}}</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <span>Género: </span> {{gender}}
+                        </li>
+                        <li class="list-group-item">
+                            <span>Estatus: </span> {{status}}
+                        </li>
+                        <li class="list-group-item">
+                            <span>Localización: </span> {{location}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>  
+        <div class="col-3">
+            <button class="btn btn-custom btn-lg" routerLink="/dashboard">
+                Volver
+            </button>
+        </div>      
+    </div>
+</div>
+

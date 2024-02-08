@@ -1,0 +1,8 @@
+<div class="contaner">
+    <app-spinner class="mt-5" *ngIf="loading"></app-spinner>
+    <div class="row justify-content-between mt-5" *ngIf="listUsuarios.length > 0">
+        <div class="col-3 mb-3" *ngFor="let usuario of listUsuarios">
+            <app-card-usuario [usuario]="usuario"></app-card-usuario>
+        </div>
+    </div>
+</div>
